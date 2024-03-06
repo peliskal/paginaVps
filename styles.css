@@ -5,6 +5,23 @@ body{
     background-color: #f1f1f1;
     height: 1500px;
 }
+/*letras*/
+header, h3, h2{
+    letter-spacing: 3px;
+    word-spacing: 2px;
+font-family: "PT Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+p,span{
+    letter-spacing: 1.2px;
+    font-family: "roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 header{
    position: fixed;
    z-index: 1;
@@ -12,6 +29,7 @@ header{
     height: 50px;
     display: flex;
     background-color: #252835;
+    box-shadow: 0 -1px 5px #00e5fe;
 }
 .menu{
     margin: auto;
@@ -25,11 +43,11 @@ header{
     padding: 10px 0px 10px 0px;
 }
 #olMenu{
-    color: red;
-    width: 100%;
+    margin: auto;
+    width: 90%;
     list-style: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 .visible {
@@ -49,14 +67,14 @@ header{
     position: relative;
     content: '';
     width: 100%; height: 2px;
-    background-color:#5cccb8;
+    background-color:#1ed760;
     transform: scale(0);
     transform-origin: right;
     transition: transform .5s;
 }
 #lis:hover::after{
     transform: scale(1);
- background-color: #5cccb8;
+ background-color: #1ed760;
     transform-origin: left;
 }
 .imagen{
@@ -73,7 +91,7 @@ header{
     padding: 40px 0 40px 0 ;
     text-align: center;
     border-top: 1px solid #ffffff;
-    background-color: #fff;
+    background-color: #fbf8f8;
     height: auto;
 }
 
@@ -96,14 +114,15 @@ header{
     padding: 30px auto;
     width: 100%;
     flex-wrap: wrap;
+    box-shadow: 0px -1px 1px #1ed760;
 }
 
 #cubosInfo > div{
     padding: 40px 0 40px 0;
     margin: 30px 0 30px 0 ;
     text-align: center;
-    width: 400px;
-    box-shadow:0px 0px 10px rgb(255, 255, 255);
+    width: 40em;
+   
     color: #f1f1f1;
 }
 #cubosInfo div > h3{
@@ -150,7 +169,8 @@ padding: 0 6px 0 6px;
     background-image: url(tuweb.gif);
     background-position: center center;
     background-size: contain;
-    height: 7.5em;
+    height: 4em;
+    max-height: 7.2em;
 }
 
 .promos{
@@ -159,15 +179,19 @@ padding: 0 6px 0 6px;
     flex-wrap: wrap;
     text-align: center;
     padding: 30px 0 30px 0;
+    margin:auto;
     background-color: #fff;
+    max-width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 #rectangulos{
+    margin: 30px 0 30px 0;
     box-shadow: 0 2.5px 2.5px;
     border: 1px solid #000000;
-    width: 30%; height: 50%;
+     height: 50%; width: 30em;
     transform: scale(1);
     transition: all .2s;
     transform-origin: bottom;
@@ -178,19 +202,20 @@ padding: 0 6px 0 6px;
     box-shadow: 0 5px 5px;
 }
 #rectangulos > img{
-    width: 100%;
+    width:100%;
 }
 #rectangulos  > h3{
     color: #5ca629;
     margin: 10px 0 10px 0;
+    padding: 10px 0 10px 0;
 }
 
 #rectangulos > p{
     margin:0 auto;
-    padding: 10px 0 10px 0;
+    padding: 20px 0 20px 0;
     text-align: justify;
     font-size: 1em;
-   width: 95%;
+   width: 75%;
    color: #000000;
 }
 #rectangulos > button{
@@ -212,29 +237,40 @@ padding: 0 6px 0 6px;
 }
 
 #contienePlata {
-    color: #000000;
-    background-color: #ffff00;
+    color: #ffffff;
+    background-color: #252835;
     text-align: center;
+    width: 100%;
+    box-shadow: 0px 0 20px #c2c2c2;
 }
 .mercadoPago{
+    width:100%;
     text-align: center;
     background-color: #00bafd;
+   overflow: hidden;
     display: flex;
     justify-content: center;
 }
 .redes{
-    border: solid;
-    width: 100%;
+    width: 80%;
     margin:30px auto;
-   
 }
 .redes > ol{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+ol{
     list-style: none;
 }
-.redes ol > li{
-    
+.redes ol li a > svg{
+    width: 50px;
+    border-radius: 10px;
+    transition: ease-in-out .3s;
+}
+.redes ol li a > svg:hover{
+    transform: scale3d(30px);
+    fill: #050f037d;
 }
 
 footer{
